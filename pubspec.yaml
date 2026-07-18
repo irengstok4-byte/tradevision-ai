@@ -1,0 +1,52 @@
+name: tradevision_ai
+description: "TradeVision AI - Premium AI-powered chart analysis app (ICT/SMC)"
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+
+  # UI / Icons / Fonts
+  google_fonts: ^6.2.1
+  flutter_animate: ^4.5.0
+  shimmer: ^3.0.0
+  fl_chart: ^0.68.0
+  percent_indicator: ^4.2.3
+
+  # Image picking (gallery / camera)
+  image_picker: ^1.1.2
+
+  # State management
+  provider: ^6.1.2
+
+  # Local persistence (settings, usage count)
+  shared_preferences: ^2.2.3
+
+  # Networking (Claude API)
+  http: ^1.2.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+  # assets:
+  #   - assets/images/
+
+# NOTE: The following packages were intentionally left out of this build to
+# keep the Android build simple and reliable. They are not referenced by any
+# Dart code yet (see README roadmap section), so add them back only once you
+# actually wire up the corresponding feature -- each one adds native Android
+# configuration you'll need to set up (Firebase project + google-services.json
+# for firebase_core/firebase_auth/cloud_firestore, Gradle core library
+# desugaring for flutter_local_notifications, etc.):
+#   firebase_core, firebase_auth, cloud_firestore
+#   flutter_local_notifications
+#   file_picker, sqflite, path, http
